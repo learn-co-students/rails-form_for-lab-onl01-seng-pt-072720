@@ -1,11 +1,11 @@
 <h3>Student Form</h3>
 
-<%= form_tag students_path do %>
-    <%= label_tag('student[first_name]', "Firstname") %><br>
-    <%= text_field_tag('student[first_name]') %><br>
+<%= form_for(@student) do |f| %>
+    <%= f.label :first_name, "Firstname" %><br>
+    <%= f.text_field :first_name %><br>
 
-    <%= label_tag('student[last_name]', "Lastname") %><br>
-    <%= text_field_tag('student[last_name]') %><br>
+    <%= f.label :last_name, "Lastname" %><br>
+    <%= f.text_field :last_name %><br>
 
-    <%= submit_tag "Create Student" %>
+    <%= f.submit %>
 <% end %>
