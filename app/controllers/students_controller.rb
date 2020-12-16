@@ -4,6 +4,10 @@ class StudentsController < ApplicationController
        @student = Student.new
     end
 
+    def index
+        @student = Student.all
+    end
+
     def create
         @student = Student.new(student_params)
         @student.save
