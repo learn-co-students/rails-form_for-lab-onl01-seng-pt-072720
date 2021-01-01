@@ -1,0 +1,15 @@
+<h1>SchoolClasses#new</h1>
+<p>Find me in app/views/school_classes/new.html.erb</p>
+
+<!--<h3>School Class Form</h3> -->
+
+<%= form_for(@school_classes) do |f| %>
+
+  <label>School Class title:</label><br>
+  <%= f.string :title %><br>
+  
+  <label>Room Number</label><br>
+  <%= f.integer :room_number %><br>
+
+  <%= f.submit %>
+<% end %>
